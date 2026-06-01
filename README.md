@@ -7,7 +7,7 @@
 
 ## 🚀 Live Demo
 
-- [ai-test-case-generator-jose-wannan.streamlit.app](https://app-results-analyzer-jose-wannan.streamlit.app/)
+- [app-results-analyzer-jose-wannan.streamlit.app](https://app-results-analyzer-jose-wannan.streamlit.app/)
 
 > No login required. Use the sample data toggle to explore without uploading any file.
 

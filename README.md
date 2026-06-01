@@ -134,7 +134,7 @@ qa-results-analyzer/
 ├── parsers/
 │   ├── jmeter.py           # JMeter .jtl parser — auto-detects CSV and XML formats
 │   ├── playwright.py       # Playwright JSON reporter parser
-│   ├── junit.py            # Selenium / JUnit XML parser
+│   ├── selenium.py         # Selenium / JUnit XML parser
 │   └── sample_data.py      # Realistic sample data generators for demo
 ├── requirements.txt        # Direct dependencies only
 ├── .env.example            # API key template
@@ -148,7 +148,7 @@ qa-results-analyzer/
 
 - **JMeter CSV and XML are both supported** — the parser auto-detects the format from the first bytes of the file. No configuration needed.
 - **AI analysis is token-efficient** — the app sends a compact metrics summary to the LLM, not the raw file. A full analysis costs ~200–400 input tokens.
-- **No data is stored** — uploaded files are held in memory for the session only. Nothing is written to disk or sent anywhere except the metrics summary to Groq.
+- Uploaded files are processed in memory during the Streamlit session. Raw files are not saved by the app. For AI analysis, only aggregated metrics are sent to Groq.
 - **Models with reasoning** (e.g. `qwen3-32b`) may output `<think>` blocks — these are automatically filtered before display.
 
 ---
